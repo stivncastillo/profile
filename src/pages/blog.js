@@ -1,13 +1,12 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import SEO from "../components/layout/seo"
-
 export default () => (
   <Layout>
-    <SEO title="Home" />
     <div>
-      <h1>Hi! I'm building my profile page!</h1>
-      <p>Coming soon.</p>
+      <h1 className="title">About me</h1>
+      <p>
+        I’m good enough, I’m smart enough, and gosh darn it, people like me!
+      </p>
     </div>
   </Layout>
 )

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&display=swap");
+@import "./_colors.scss";
+@import "./_responsive.scss";
+
+body {
+  background: $color-background;
+  color: $color-text;
+  font-family: "Roboto Mono";
+  font-size: 16px;
+  margin: 0;
+}
+
+a {
+  color: color-primary;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(md) {
+    width: 960px;
+  }
+}
+
+.Header {
+  width: 100%;
+  padding: 1rem 0;
+  background: $color-background;
+  border-bottom: solid 1px red;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+
+    @include media(md) {
+      padding: 0;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    @include media(xs) {
+      margin: auto;
+    }
+  }
+}
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 0;
+  background: $color-background;
+  border-top: solid 1px red;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media(xs) {
+      padding: 0 1em;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &-copy {
+    color: $color-gray;
+    font-size: 14px;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    & > a {
+      margin-left: 1em;
+    }
+  }
+}
+
+@import "./components/navbar.scss";

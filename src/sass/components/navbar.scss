@@ -1,0 +1,27 @@
+.Navbar {
+  flex: 1;
+  & > ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include media(xs) {
+      justify-content: center;
+    }
+
+    li {
+      & > a {
+        display: block;
+        padding: 1em;
+        color: $color-text;
+        &:hover,
+        &.active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
