@@ -122,4 +122,12 @@ main {
   font-weight: 300;
 }
 
+.Typewriter {
+  display: inline-block;
+}
+
+.Typewriter__wrapper {
+  background: $color-secondary;
+}
+
 @import "./components/navbar.scss";

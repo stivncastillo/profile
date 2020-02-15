@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 import ProfileImage from "../images/stiven.jpg"
+import Typewriter from "typewriter-effect"
 
 export default () => (
   <Layout>
@@ -21,7 +22,23 @@ export default () => (
                   <div className="CardProfile-resume">
                     <h1>Hi, I'm Stiven Castillo</h1>
                     <h2>
-                      I <span>Design</span>
+                      I{" "}
+                      <Typewriter
+                        options={{
+                          strings: [
+                            "design",
+                            "tattoo",
+                            "code",
+                            "play soccer",
+                            "teach",
+                            "debug",
+                            "learn",
+                          ],
+                          delay: 50,
+                          autoStart: true,
+                          loop: true,
+                        }}
+                      />
                     </h2>
                   </div>
                 </div>
