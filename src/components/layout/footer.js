@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="row">
         <div className="col-sm-6 order-2 order-sm-6">
           <div className="Footer-copy">
-            <p>© 2020. Build with Gatsby</p>
+            <p>© 2020. Built with Gatsby</p>
           </div>
         </div>
         <div className="col-sm-6 order-1 order-sm-6">
