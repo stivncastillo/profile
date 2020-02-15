@@ -17,6 +17,7 @@
         display: block;
         padding: 1em;
         color: $color-text;
+        text-decoration: none;
         &:hover,
         &.active {
           color: $color-primary;

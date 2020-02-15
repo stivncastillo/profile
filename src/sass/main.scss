@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap");
 @import "./_colors.scss";
+@import "./_grid.scss";
 @import "./_responsive.scss";
 
 body {
@@ -11,17 +12,23 @@ body {
 }
 
 a {
-  color: color-primary;
-  text-decoration: none;
+  color: $color-text;
+  &:hover {
+    color: $color-primary;
+  }
 }
 
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+main {
+  // background: cyan;
+}
 
-  @include media(md) {
-    width: 960px;
+.section {
+  &-main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -29,19 +36,9 @@ a {
   width: 100%;
   padding: 1rem 0;
   background: $color-background;
-  border-bottom: solid 1px red;
-  &-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 1rem;
-    flex-wrap: wrap;
-
-    @include media(md) {
-      padding: 0;
-    }
-  }
+  position: fixed;
+  top: 0;
+  z-index: 1;
 
   &-logo {
     display: flex;
@@ -58,34 +55,71 @@ a {
   width: 100%;
   padding: 1em 0;
   background: $color-background;
-  border-top: solid 1px red;
-  &-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-
-    @include media(xs) {
-      padding: 0 1em;
-      justify-content: center;
-      flex-direction: row-reverse;
-    }
-  }
+  z-index: 1;
 
   &-copy {
     color: $color-gray;
-    font-size: 14px;
+    font-size: 12px;
+    @include media(sm) {
+      text-align: center;
+    }
+    @include media(xs) {
+      text-align: center;
+    }
   }
 
   &-social {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    & > a {
-      margin-left: 1em;
+    & > p {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      @include media(sm) {
+        justify-content: space-between;
+      }
+      @include media(xs) {
+        justify-content: space-between;
+      }
+      & > a {
+        margin-left: 1em;
+        color: $color-text;
+        &:hover {
+          color: $color-primary;
+        }
+      }
     }
   }
+}
+
+.CardProfile {
+  margin-bottom: 3em;
+  &-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & > img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &-resume {
+    & > h1,
+    & > h2 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.Profile-resume {
+  color: $color-gray;
+  font-weight: 300;
 }
 
 @import "./components/navbar.scss";

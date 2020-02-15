@@ -5,11 +5,15 @@ import Logo from "../../images/logo.svg"
 const Header = () => (
   <header className="Header">
     <div className="container">
-      <div className="Header-container">
-        <div className="Header-logo">
-          <img src={Logo} />
+      <div className="row" style={{ alignItems: "center" }}>
+        <div className="col-sm-6 col-xs-12">
+          <div className="Header-logo">
+            <img src={Logo} alt="Logo" />
+          </div>
         </div>
-        <Navbar />
+        <div className="col-sm-6 col-xs-12">
+          <Navbar />
+        </div>
       </div>
     </div>
   </header>
